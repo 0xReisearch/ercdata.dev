@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ERCData — On-chain memory for AI agents</title>
-  <meta name="description" content="Store, verify, and share AI data on Base. Built for OpenClaw bots.">
+  <meta name="description" content="Store, verify, and share AI data on Base. Built for OpenClaw agents.">
   <meta property="og:title" content="ERCData — On-chain memory for AI agents">
-  <meta property="og:description" content="Store, verify, and share AI data on Base. Built for OpenClaw bots.">
+  <meta property="og:description" content="Store, verify, and share AI data on Base. Built for OpenClaw agents.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ERCData — On-chain memory for AI agents">
-  <meta name="twitter:description" content="Store, verify, and share AI data on Base. Built for OpenClaw bots.">
+  <meta name="twitter:description" content="Store, verify, and share AI data on Base. Built for OpenClaw agents.">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
@@ -426,10 +426,29 @@
     /* Mobile tweaks */
     @media (max-width: 639px) {
       .hero-emoji { font-size: 3rem; }
-      h1 { font-size: 2.75rem; }
-      section { padding: 3rem 0; }
+      h1 { font-size: 2.25rem; }
+      h2 { font-size: 1.5rem; }
+      section { padding: 2.5rem 0; }
+      .container { padding: 0 1rem; }
       .contract-address { font-size: 0.75rem; }
-      .nav-links { gap: 1rem; }
+      .nav-links { gap: 0.75rem; }
+      .nav-links a { font-size: 0.75rem; }
+      .hero { padding: 3rem 0 2.5rem; }
+      .hero-subtitle { font-size: 1.1rem; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .hero-buttons .btn { width: 100%; max-width: 16rem; text-align: center; }
+      .card { padding: 1.25rem; }
+      .card-coral { padding: 1.5rem !important; }
+      .code-block { font-size: 0.75rem; padding: 1rem; }
+      .stat-number { font-size: 2rem; }
+      .step-circle { width: 2rem; height: 2rem; font-size: 0.875rem; }
+      #how-it-works h2,
+      #use-cases h2,
+      #code-examples h2 { text-align: center; }
+      .grid-4 .card,
+      .grid-3 .card { text-align: center; }
+      #contract .card { text-align: center; }
+      #contract .flex-center { justify-content: center; }
     }
   </style>
 </head>
@@ -464,8 +483,8 @@
     <section id="get-started">
       <div class="card card-coral" style="padding: 2.5rem;">
         <span class="pill mb-2" style="display: inline-block;">Get Started</span>
-        <h2 class="mt-2">Give your bot on-chain memory</h2>
-        <p class="text-muted mt-1" style="max-width: 36rem;">Three ways to get your bot storing data on-chain</p>
+        <h2 class="mt-2">Give your agent on-chain memory</h2>
+        <p class="text-muted mt-1" style="max-width: 36rem;">Three ways to get your agent storing data on-chain</p>
 
         <!-- Method 1: ClawdHub -->
         <div style="margin-top: 2rem;">
@@ -478,7 +497,7 @@
 
         <!-- Method 2: Tell your agent -->
         <div style="margin-top: 1.5rem;">
-          <h3 style="font-size: 1rem; font-weight: 700;">2. Tell your agent to read the skill</h3>
+          <h3 style="font-size: 1rem; font-weight: 700;">2. Tell your agent to install it</h3>
           <p class="text-sm text-muted mt-1">Just say this to your OpenClaw agent:</p>
           <div class="code-block mt-1" style="color: #fbbf24;">
             <code>"Read the ERCData skill at https://ercdata.dev/skill.md and set it up for me"</code>
@@ -495,7 +514,7 @@
         </div>
 
         <p class="text-sm text-muted" style="margin-top: 1.5rem; opacity: 0.7;">
-          Your bot handles the rest — key setup, contract interaction, everything.
+          Your agent handles the rest — key setup, contract interaction, everything.
         </p>
       </div>
     </section>
@@ -534,7 +553,7 @@
         <div class="card" style="padding: 1.75rem;">
           <div class="step-circle">1</div>
           <h3>Install</h3>
-          <p class="text-sm text-muted mt-1">Add the ERCData skill to your OpenClaw bot</p>
+          <p class="text-sm text-muted mt-1">Add the ERCData skill to your OpenClaw agent</p>
         </div>
         <div class="card" style="padding: 1.75rem;">
           <div class="step-circle">2</div>
@@ -556,7 +575,7 @@
 
     <!-- Use Cases -->
     <section id="use-cases">
-      <h2 class="mb-3">What bots store</h2>
+      <h2 class="mb-3">What agents store</h2>
       <div class="grid-3">
         <div class="card" style="padding: 2rem;">
           <div style="font-size: 2rem; margin-bottom: 0.75rem;">🧠</div>
@@ -586,7 +605,7 @@
 ercdata store \
   --type AI_AGENT_MEMORY \
   --data "My first on-chain memory" \
-  --metadata '{"agent":"MyBot"}'</code></div>
+  --metadata '{"agent":"MyAgent"}'</code></div>
         </div>
         <div>
           <p class="code-label">Read</p>
@@ -618,7 +637,7 @@ ercdata verify --id 1 --method eip712</code></div>
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p class="text-sm" style="color: #999;">Built for OpenClaw bots.</p>
+      <p class="text-sm" style="color: #999;">Built for OpenClaw agents.</p>
       <div class="footer-links">
         <a href="https://github.com/0xReisearch/ercdata-skill" target="_blank" rel="noopener">GitHub</a>
         <a href="https://basescan.org/address/0x15115BB7e18666F13dd384b7347B196c2F6c7a8c" target="_blank" rel="noopener">Basescan</a>
