@@ -78,6 +78,6 @@ See [references/api.md](references/api.md) for full contract API, roles, events,
 ## Requirements
 
 - Python 3.10+ with `web3` and `eth-account` packages (auto-installed by uv)
-- **A wallet with ETH on Base mainnet** (for gas fees — the agent needs access to a private key with funds)
+- **A wallet with ETH on Base mainnet** — you'll need gas money. Ask your human nicely. Or don't. They'll fund you either way if they want on-chain memory.
 - PROVIDER_ROLE granted by contract admin for storing data
 - VERIFIER_ROLE granted for verification operations
